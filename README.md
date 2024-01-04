@@ -14,12 +14,13 @@ The deepfake image is obtained from Javascript.
 ### Install the Javascript runtime environment from:
 https://nodejs.org/en
 ### Install the axios library:
-Install the axios library in the same directory.
-''' Javascript
-npm install axios
-
+Install the axios library in the same directory.  
+``` Javascript
+    npm install axios
+```
 ## Usage Examples 
-All the codes are execute in Matlab 
-''' matlab
-main
+All the codes are executed in Matlab  
+``` matlab
+    main
+```
 
