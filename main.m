@@ -23,8 +23,13 @@ MSE=mean(SE(:));
 PSNR=10*log10(255*255/MSE);
 mSSIM=ssim(double_Yb, double_Y);
 
+%%% 1. Please install Node.js before testing deepfake.
+%%% 2. Install axios to the relevant directory, command: npm install axios
+
 % Key3='01d02f4d1emsh7c27856ee3b5db3p181873jsn0789b5ecd180';
-% Yb=Deepfake(Yb,Key3);% 
+% Yb=Deepfake(Yb,Key3); 
+
+
 imwrite(Yb,'a.jp2','CompressionRatio',5); 
 Yb=imread('a.jp2');
 figure(3);imshow(Yb);title('deepfake watermark image') 
