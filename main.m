@@ -2,7 +2,7 @@
 [Y]=imread('198054.jpg');
 [Y]=imread('32lena.ppm');
 % [Y]=imread('06baboon.ppm');
-[Y]=imread('AI1.jpg');
+% [Y]=imread('AI1.jpg');
 
 Key1=0.369;
 Key2=33; 
@@ -23,11 +23,10 @@ MSE=mean(SE(:));
 PSNR=10*log10(255*255/MSE);
 mSSIM=ssim(double_Yb, double_Y);
 
-% Key3='bbffc6a2f5mshcc54233c84b3e32p17c771jsne743eb461112';
 % Key3='01d02f4d1emsh7c27856ee3b5db3p181873jsn0789b5ecd180';
-% Key3='8f45832eccmshf1886af41c3be10p171c10jsncb152ab4cd7e';
 % Yb=Deepfake(Yb,Key3);% 
-imwrite(Yb,'a.jp2','CompressionRatio',5); Yb=imread('a.jp2');
+imwrite(Yb,'a.jp2','CompressionRatio',5); 
+Yb=imread('a.jp2');
 figure(3);imshow(Yb);title('deepfake watermark image') 
 
 [Ym,WMb]=AwDDExtract(Yb,Key1,Key2,Delta,selidxs); 
